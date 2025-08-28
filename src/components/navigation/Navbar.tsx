@@ -1,5 +1,5 @@
 // import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -41,7 +41,30 @@ const Navbar = () => {
           </Link>
         ))}
       </Box>
-      <Box>Sign In Buttons</Box>
+      <Box sx={{ display: "flex", gap: 2 }}>
+        <Button
+          sx={{
+            backgroundColor: "#f00",
+            color: "#fff",
+            fontWeight: "bold",
+            paddingX: 6,
+            fontSize: 12,
+          }}
+        >
+          Login
+        </Button>
+        <Button
+          sx={{
+            backgroundColor: "#f00",
+            color: "#fff",
+            fontWeight: "bold",
+            paddingX: 6,
+            fontSize: 12,
+          }}
+        >
+          Register
+        </Button>
+      </Box>
     </Box>
   );
 };

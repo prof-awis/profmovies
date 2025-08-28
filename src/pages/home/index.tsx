@@ -5,6 +5,8 @@ import image1 from "../../assets/posters/after.jpg";
 import image2 from "../../assets/posters/antman.jpg";
 import image3 from "../../assets/posters/assassin.jpg";
 import image4 from "../../assets/posters/guardian.jpg";
+import LinedTitle from "../../components/common/LinedTitle";
+import MediaCard from "../../components/common/MediaCard";
 
 const Home = () => {
   const images = [image1, image2, image3, image4];
@@ -42,19 +44,7 @@ const Home = () => {
             paddingLeft: 12,
           }}
         >
-          <Typography
-            variant="h6"
-            sx={{
-              display: "inline-block",
-              borderBottom: "2px solid #f00",
-              paddingBottom: 0.5,
-              marginBottom: 4,
-            }}
-            fontStyle={"italic"}
-            fontWeight={"bold"}
-          >
-            ProfMovies
-          </Typography>
+          <LinedTitle Title="ProfMovies" />
           <Typography variant="h3" fontWeight={"bold"}>
             Find your next Favorite Movie
           </Typography>
@@ -138,7 +128,141 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
-      <Box sx={{ color: "#fff", padding: 3, paddingX: 6 }}>Content Below</Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          color: "#fff",
+          paddingX: 9,
+          paddingY: 6,
+          paddingBottom: 12,
+          gap: 8,
+        }}
+      >
+        <Box>
+          <LinedTitle Title="Recently Added" />
+          <Box
+            sx={{
+              display: "flex",
+              gap: 4,
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              "& > *": {
+                width: 360, // or your preferred width
+                flexShrink: 0,
+              },
+            }}
+          >
+            <MediaCard />
+            <MediaCard />
+            <MediaCard />
+            <MediaCard />
+            <MediaCard />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              marginTop: 6,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Button
+              sx={{
+                backgroundColor: "#f00",
+                color: "#fff",
+                fontWeight: "bold",
+                paddingX: 8,
+                fontSize: 12,
+              }}
+            >
+              Show More
+            </Button>
+          </Box>
+        </Box>
+        <Box>
+          <LinedTitle Title="Latest Movies" />
+          <Box
+            sx={{
+              display: "flex",
+              gap: 4,
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              "& > *": {
+                width: 360, // or your preferred width
+                flexShrink: 0,
+              },
+            }}
+          >
+            <MediaCard />
+            <MediaCard />
+            <MediaCard />
+            <MediaCard />
+            <MediaCard />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              marginTop: 6,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Button
+              sx={{
+                backgroundColor: "#f00",
+                color: "#fff",
+                fontWeight: "bold",
+                paddingX: 8,
+                fontSize: 12,
+              }}
+            >
+              Show More
+            </Button>
+          </Box>
+        </Box>
+        <Box>
+          <LinedTitle Title="Latest TV-Series" />
+          <Box
+            sx={{
+              display: "flex",
+              gap: 4,
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+              "& > *": {
+                width: 360, // or your preferred width
+                flexShrink: 0,
+              },
+            }}
+          >
+            <MediaCard />
+            <MediaCard />
+            <MediaCard />
+            <MediaCard />
+            <MediaCard />
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              marginTop: 6,
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Button
+              sx={{
+                backgroundColor: "#f00",
+                color: "#fff",
+                fontWeight: "bold",
+                paddingX: 8,
+                fontSize: 12,
+              }}
+            >
+              Show More
+            </Button>
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 };
